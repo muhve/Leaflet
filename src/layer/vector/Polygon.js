@@ -122,7 +122,7 @@ export var Polygon = Polyline.extend({
 		// polygons need a different clipping algorithm so we redefine that
 
 		var bounds = this._renderer._bounds,
-		    w = this.options.weight,
+		    w = parseInt(this.options.weight, 10),
 		    p = new Point(w, w);
 
 		// increase clip padding by stroke width to avoid stroke on clip edges
